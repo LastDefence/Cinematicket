@@ -1,5 +1,5 @@
 # Cinematicket
 Cinematicket by:
-Onur Demir
-Kubra Sahin
+Onur Demir, 
+Kubra Sahin, 
 N. Zeynep Cicekli
