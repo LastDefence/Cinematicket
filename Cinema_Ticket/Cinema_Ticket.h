@@ -17,6 +17,7 @@ class cinema
 	const int indirimli = 10, tam = 15;
 	const T acilissaati = 10;
 public:
+	int tamtop=0, intop=0;
 	cinema();
 	void menu();
 	void getsaloninfo(int);

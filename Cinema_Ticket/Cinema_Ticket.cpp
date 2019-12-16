@@ -2,7 +2,7 @@
 #include "Cinema_Ticket.h"
 #include <stdlib.h>
 #define salonsayisi 5
-int toptam, topin;
+
 template <class T>
 cinema<T>::cinema() {
 	a = new salon[salonsayisi];
@@ -91,8 +91,8 @@ void cinema<T>::ticketbuy()
 		{
 			fiyat = (in * indirimli) + (tams * tam);
 			koltukis(salonnum - 1, tams, in);
-			toptam = toptam + tams;
-			topin = topin + in;
+			tamtop = tamtop + tams;
+			intop = intop + in;
 			cout << "Ucret: " << fiyat << endl;
 			cout << "Islemi bitirmek icin Enter'a basiniz...";
 			contiueforpress();
@@ -172,8 +172,8 @@ void cinema<T>::ticketreturn()
 			koltukis(salonnum - 1, tams * (-1), in * (-1));
 			cout << "Iade Edilecek Ucret: " << fiyat << endl;
 			cout << "Islemi bitirmek icin Enter'a basiniz...";
-			toptam = toptam - tams;
-			topin = topin - in;
+			tamtop = tamtop - tams;
+			intop = intop - in;
 			contiueforpress();
 			menu();
 		}
@@ -189,9 +189,9 @@ void cinema<T>::ticketreturn()
 template <class T>
 void cinema<T>::hasilat() {
 	system("CLS");
-	cout << "Satilan toplam indirimli bilet adedi: " << topin << endl;
-	cout << "Satilan toplam tam bilet adedi: " << toptam << endl;
-	cout << "Toplam hasilat:" << topin * 10 + toptam * 15 << endl;
+	cout << "Satilan toplam indirimli bilet adedi: " << intop << endl;
+	cout << "Satilan toplam tam bilet adedi: " << tamtop << endl;
+	cout << "Toplam hasilat:" << intop * 10 + tamtop * 15 << endl;
 	cout << "Islemi bitirmek icin Enter'a basiniz...";
 	contiueforpress();
 	menu();
