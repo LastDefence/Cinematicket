@@ -1,6 +1,5 @@
 ﻿#include <iostream>
 #include "Cinema_Ticket.h"
-#include <stdlib.h>
 #define salonsayisi 5
 
 template <class T>
